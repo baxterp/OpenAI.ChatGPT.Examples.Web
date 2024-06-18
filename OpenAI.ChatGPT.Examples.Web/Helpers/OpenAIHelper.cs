@@ -13,9 +13,11 @@ namespace OpenAI.ChatGPT.Examples.Web.Helpers
         {
             try
             {
-                var openAiApiKey = "sk-proj-AQnhbXJKg6qVX9nclcHZT3BlbkFJwPPqIR29ITaX0yof081Z";
+                var openAiApiKey = Environment.GetEnvironmentVariable("OpenAIKey", EnvironmentVariableTarget.User);
+
                 APIAuthentication aPIAuthentication = new APIAuthentication(openAiApiKey);
                 OpenAIAPI openAiApi = new OpenAIAPI(aPIAuthentication);
+
                 return openAiApi;
             }
             catch (Exception)
@@ -35,7 +37,7 @@ namespace OpenAI.ChatGPT.Examples.Web.Helpers
 
                 var completionRequest = new ChatRequest()
                 {
-                    Model = Model.GPT4_Vision,
+                    Model = Model.ChatGPTTurbo,
                     Temperature = 0.0,
                     MaxTokens = maxTokens,
                     Messages = combinedMessages.ToArray()

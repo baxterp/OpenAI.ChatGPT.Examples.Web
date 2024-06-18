@@ -1,4 +1,12 @@
 ﻿
+var language = '';
+
+function LanguageSelected(languageIN) {
+  language = languageIN;
+  $('#lblLang').html(language + ' selected');
+  $('#btnSubmit').prop("disabled", false);
+}
+
 function ShowOverlay(message) {
   $("#divOverlay").LoadingOverlay("show", {
     text: message,
@@ -11,7 +19,7 @@ function HideOverlay() {
 
 function GetTranslation() {
 
-  var systemPrompt = 'You will be provided with a sentence in English, and your task is to translate it into French';
+  var systemPrompt = 'You will be provided with a sentence in English, and your task is to translate it into ' + language;
   console.log('systemPrompt: ' + systemPrompt);
   var userPrompt = $('#inputText').val();
   console.log('userPrompt: ' + userPrompt);
@@ -44,8 +52,10 @@ function GetTranslation() {
 }
 
 $(function () {
-  $('.dropdown').on("click", (function () {
-    $('.dropdown-menu').toggleClass('show');
+  $('#examplesBtn').on("click", (function () {
+    $('#examplesDD').toggleClass('show');
   }));
-  //GetTranslation();
+  $('#langBtn').on("click", (function () {
+    $('#langDD').toggleClass('show');
+  }));
 });

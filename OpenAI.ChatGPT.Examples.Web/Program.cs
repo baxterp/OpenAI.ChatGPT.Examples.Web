@@ -28,8 +28,4 @@ app.MapControllerRoute(
     name: "naturalLanguageTranslator",
     pattern: "{controller=NaturalLanguageTranslator}/{action=Index}");
 
-app.MapControllerRoute(
-    name: "getTranslation",
-    pattern: "{controller=NaturalLanguageTranslator}/{action=GetTranslation}");
-
 app.Run();
