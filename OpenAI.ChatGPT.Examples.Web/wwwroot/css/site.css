@@ -20,3 +20,19 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/*.CEtextarea {
+    overflow-y: scroll;
+    height: 250px;
+    resize: none;
+    width: 100%;
+}*/
+textarea {
+    background-color: #355E3B;
+    color: wheat;
+
+    overflow-y: scroll;
+    height: 250px;
+    resize: none;
+    width: 100%;
+}

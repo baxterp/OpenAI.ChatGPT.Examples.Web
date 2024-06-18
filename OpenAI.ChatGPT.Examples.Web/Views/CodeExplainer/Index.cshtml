@@ -1,0 +1,20 @@
+﻿
+@{
+    var snippet = ViewBag.CodeSnippet;
+}
+
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-sm-12 col-md-12 col-lg-8">
+            <div class="jumbotron">
+                <h2 class="display-4">Software Code Explainer</h2>
+                <p class="lead">This is an example of using ChatGPT To explain how a section code seems to work, in this case a javascipt snippet is used. Your own code snippets can be inserted also.</p>
+                <hr class="my-4">
+                <p>Code snippet</p>
+                <textarea class="CEtextarea" id="inputText">@snippet</textarea>
+                <button id="btnSubmit" class="btn btn-primary" style="margin-bottom:5px;" onclick="javascript:GetExplanation()">Submit</button>
+                <textarea class="CEtextarea" readonly id="outputText"></textarea>
+            </div>
+        </div>
+    </div>
+</div>

@@ -10,4 +10,10 @@
     <PackageReference Include="OpenAI" Version="1.11.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="TextFiles\CodeSnippet.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
