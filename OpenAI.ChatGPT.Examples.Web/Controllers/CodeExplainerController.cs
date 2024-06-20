@@ -1,6 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OpenAI.ChatGPT.Examples.Web.Helpers;
 using OpenAI_API.Chat;
+using System.IO;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Extensions;
+using System.Net.Http;
 
 namespace OpenAI.ChatGPT.Examples.Web.Controllers
 {
@@ -8,9 +12,18 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
     {
         public IActionResult Index()
         {
-            var codeText = FileHelper.GetCodeSnippet();
-            ViewBag.CodeSnippet = codeText;
-            return View();
+            try
+            {
+                string siteRootDirectory = Directory.GetCurrentDirectory();
+                var codeText = FileHelper.GetCodeSnippet(siteRootDirectory);
+                ViewBag.CodeSnippet = codeText;
+                return View();
+            }
+            catch (Exception ex)
+            {
+                System.IO.File.WriteAllText("log.txt", ex.Message);
+                return View();
+            }
         }
 
         [HttpPost]

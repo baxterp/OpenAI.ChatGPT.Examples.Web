@@ -20,8 +20,9 @@ namespace OpenAI.ChatGPT.Examples.Web.Helpers
 
                 return openAiApi;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                System.IO.File.WriteAllText("CreateChatClient.txt", ex.Message);
                 throw;
             }
         }
@@ -48,8 +49,9 @@ namespace OpenAI.ChatGPT.Examples.Web.Helpers
 
                 return generatedText;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                System.IO.File.WriteAllText("GetReponse.txt", ex.Message);
                 throw;
             }
         }
