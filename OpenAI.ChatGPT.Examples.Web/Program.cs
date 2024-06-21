@@ -32,4 +32,8 @@ app.MapControllerRoute(
     name: "codeExplainer",
     pattern: "{controller=CodeExplainer}/{action=Index}");
 
+app.MapControllerRoute(
+    name: "jobCoverLetter",
+    pattern: "{controller=JobCoverLetter}/{action=Index}");
+
 app.Run();

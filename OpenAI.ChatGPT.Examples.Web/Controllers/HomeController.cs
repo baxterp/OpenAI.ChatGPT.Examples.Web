@@ -13,10 +13,19 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        [Route("Home/GetPromptResponse")]
+        public IActionResult GetPromptResponse([FromBody] List<string> prompts)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            string systemPrompt = prompts[0];
+            string userPrompt = prompts[1];
+
+            var systemMessage = new ChatMessage(ChatMessageRole.System, systemPrompt);
+            var userMessages = new List<ChatMessage> { new ChatMessage(ChatMessageRole.User, userPrompt) };
+
+            var textResponse = OpenAIHelper.GetReponseFromPrompts(systemMessage, userMessages);
+
+            return Json(textResponse);
         }
     }
 }

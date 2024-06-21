@@ -7,6 +7,21 @@ function LanguageSelected(languageIN) {
   $('#btnSubmit').prop("disabled", false);
 }
 
+function GetJobCoverLetter() {
+  ShowOverlay('Wait...');
+
+  fetch('JobCoverLetter/GetJobCoverLetter', {
+    method: 'GET'
+   })
+    .then(res => res.json())
+    .then(function (data) {
+      console.log('data from server');
+      console.log(data);
+      HideOverlay();
+      $('#outputText').html(data);
+    });
+}
+
 function GetExplanation() {
   var systemPrompt = 'Explain a complicated piece of code';
   console.log('systemPrompt: ' + systemPrompt);
@@ -23,7 +38,7 @@ function GetExplanation() {
 
   ShowOverlay('Wait...');
 
-  fetch('NaturalLanguageTranslator/GetTranslation', {
+  fetch('Home/GetPromptResponse', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -69,7 +84,7 @@ function GetTranslation() {
 
   ShowOverlay('Wait...');
 
-  fetch('NaturalLanguageTranslator/GetTranslation', {
+  fetch('Home/GetPromptResponse', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',

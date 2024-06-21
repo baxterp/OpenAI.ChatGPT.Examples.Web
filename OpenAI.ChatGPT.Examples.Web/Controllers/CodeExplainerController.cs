@@ -21,24 +21,9 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
             }
             catch (Exception ex)
             {
-                System.IO.File.WriteAllText("log.txt", ex.Message);
+                System.IO.File.WriteAllText("CodeExplainerController.log", ex.Message);
                 return View();
             }
-        }
-
-        [HttpPost]
-        [Route("NaturalLanguageTranslator/GetExplanation")]
-        public IActionResult GetExplanation([FromBody] List<string> prompts)
-        {
-            string systemPrompt = prompts[0];
-            string userPrompt = prompts[1];
-
-            var systemMessage = new ChatMessage(ChatMessageRole.System, systemPrompt);
-            var userMessages = new List<ChatMessage> { new ChatMessage(ChatMessageRole.User, userPrompt) };
-
-            var textResponse = OpenAIHelper.GetReponseFromPrompts(systemMessage, userMessages);
-
-            return Json(textResponse);
         }
     }
 }

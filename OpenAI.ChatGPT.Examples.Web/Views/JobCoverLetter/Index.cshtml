@@ -1,0 +1,20 @@
+﻿
+@{
+    var jobSpec = ViewBag.JobSpec;
+}
+
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-sm-12 col-md-12 col-lg-8">
+            <div class="jumbotron">
+                <h2 class="display-5" style="text-align:center">Job Cover Letter</h2>
+                <p class="lead">This is an example of using ChatGPT to create a Job Cover Letter, based on a persons CV, and a job specification.</p>
+                <hr class="my-4">
+                <p>Job Specification</p>
+                <textarea class="CEtextarea" id="inputText">@jobSpec</textarea>
+                <button id="btnSubmit" class="btn btn-primary" style="margin-bottom:5px;" onclick="javascript:GetJobCoverLetter()">Get Job Cover Letter</button>
+                <textarea class="CEtextarea" readonly id="outputText"></textarea>
+            </div>
+        </div>
+    </div>
+</div>

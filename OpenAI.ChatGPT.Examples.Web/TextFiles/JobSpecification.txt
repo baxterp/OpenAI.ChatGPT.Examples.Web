@@ -1,0 +1,20 @@
+﻿This the job spec
+
+My client is seeking C# Developers (junior, mid, and senior) with expertise in C#, ASP.NET MVC, and SQL Server for a position based in Coventry. The role entails working in-office on Tuesdays, Wednesdays, and Thursdays, and remote work on Mondays and Fridays.
+
+Applicants must reside near Coventry or be open to relocating within the UK. Unfortunately, sponsorship is not available, so individuals requiring sponsorship or holding a Tier 4 post-study visa are not eligible to apply. However, those with a Tier 2 dependent visa with over 2 years' validity may apply if they possess the necessary skills.
+
+Job Purpose:
+
+The successful candidates will contribute to the development of innovative websites, web applications, and mobile applications for SMEs, mid-sized, and large companies. The client is renowned for delivering well-managed solutions using the latest design and development techniques.
+
+Finance:
+
+The client's finance solutions are utilized by leading banks, building societies, and life insurance companies in the UK.
+
+Required Skills:
+• Proficiency in C# and experience in developing web-based solutions using ASP.NET and MVC.
+• Solid HTML and SQL query writing abilities are essential.
+• Excellent communication skills and willingness to work as part of a team are necessary.
+
+This role offers attractive benefits to the successful candidate. To learn more, please submit your details

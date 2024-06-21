@@ -1,0 +1,325 @@
+﻿This is the CV
+
+BAXTER PEARSON  BEng(Hons)
+Coventry. CV3
+Telephone: 07800 533584
+Email: baxterrpearson@gmail.com
+LinkedinProfile
+
+PROFILE
+
+An experienced software engineer, with a passion for producing high quality software.
+
+SKILLS SUMMERY
+
+Experienced since 2000 in writing Microsoft Windows applications using Microsoft Visual up to VS2019.
+Use of Microsoft ASP.NET MVC, MVC Core 2/3, WebApi, ASP.NET Webforms, Winforms, WPF, plus others.
+Experienced in the use of Microsoft C#, VB.NET, Typescript, Javascript, and other languages for developing both Web, and Windows Applications. Please see Key Software Related Skills section for more information, at the end of the document.
+Worked with external and internal customers to establish technical requirements.
+Technical authoring and report writing.
+Worked under pressure to deliver software solutions in a professional and timely manner.
+Enjoy working in a team environment.
+
+EMPLOYMENT
+
+Access Group					October 2022 – October 2023
+Senior Software Developer
+[Remote Permanent Role]
+
+Whilst at Access Group’s Abintegro division I worked on upgrades to their many educational ASP.NET web sites.
+
+ASP.NET MVC C# Core and standard platforms.
+Azure DevOps for task and sprint management.
+SQL Server 2016 and 2019 versions.
+T-SQL for creating and managing stored procedures and functions.
+Javascript and Javascript frameworks, including:
+JQuery 1.x, 2.x.
+Mustache JS
+React JS
+Javascript Ajax for HTTP requests.
+Bootstrap 2.x, 3.x, and 4.x UI frameworks.
+Entity Framework.
+Git sourcecode repositories.
+Deployment by Azure DevOps release pipelines.
+Azure Key Vault for remote storage of usernames, passwords and other secrets.
+Created a project (team of 2) which used Chat GPT, via an API, for creating job application cover letters, from a candidate’s CV, and a job specification.
+
+
+Markerstudy Insurance				December 2021-March 2022
+[Remote Contract Role]
+Whilst at Markerstudy Insurance I worked on software tasks for their public facing pet insurance websites. Technical stack:
+
+ASP.NET MVC C# Core 3.0 and standard platforms.
+Azure Dev Ops and Jira for all task and sprint management.
+Angular 11.0, Angular JS and Jquery 3 Javascript frameworks.
+Typescript / Javascript.
+Bootstrap 3 UI Framework.
+Microsoft SQL Server
+T-SQL with stored procedures, and functions.
+Entity Framework.
+
+
+EHS Data Limited					July 2021-October 2021
+Software Developer
+[Remote Contract Role]
+
+Whist at EHS Data I have worked on upgrades to their Monitor Pro ASP.NET web application. Daily scrum meetings, 2 week sprints. Leaving due to perm replacement found. Technical stack used:
+
+Microsoft .NET Core 3.
+ASP.NET MVC Core.
+C# 9.0.
+Azure Dev Ops for all task and sprint management.
+Angular 9.0 with Angular CLI.
+Typescript / Javascript.
+Bootstrap 3 UI Framework.
+Microsoft SQL Server 2016.
+T-SQL with stored procedures, and functions.
+Entity Framework 6.
+C# unit testing with MS Test and the Moq framework. Typescript unit testing with Jasmine and Karma.
+
+
+
+BRPSoft Limited					June 2020 – August 2020
+
+During the lockdown in 2020 I started developing a bespoke Web Content Management System (CMS) for a small local business. Access to the public GitHub source-code archive can be provided on request. Technical details:
+
+Microsoft .NET MVC Core 3.1.
+C# 8.0.
+Use of Web API services for asynchronous AJAX communications.
+MS SQL Server 2016.
+Entity Framework 6.0.
+C# Dependency Injection using MVC Core built in DI.
+Jquery 3, and other Javascript libraries.
+Bootstrap 4 CSS UI framework.
+IIS 8 web hosting for public internet testing.
+GitHub for source control via Visual Studio 2019.
+
+Next PLC, Leicester.				April 2018 – May 2019
+[Contract Role]
+Software Developer
+April 2018 – August 2018 (project completed).
+AB Platform Convergence Project team - Working on Next’s Ecommerce site, on a project to provide multiplatform site by subdomain (www, www2, www3, etc).
+Detailed analysis of current ecommerce site, to establish required changes to support multiplatform site.
+Analysis and updates to Next’s Google Tag Manager (GTM) implementation.
+C#, Visual Studio 2017.
+WCF and Web API services.
+Updating AB platform Javascript files to extend beyond three testing subdomains (www4 and www5 additional subdomains).
+Local testing and deployment of Ecommerce test site.
+
+Next PLC continued (2 weeks later)
+September 2018 - May 2019
+PIM Framework Team – Working as a developer in the PIM Framework support team providing major functional upgrades (Dynamic Attributes, Best Shot URL overrides, plus others), and other software related tasks. Worked mostly on client web apps used in Pune India (PIM Swap and PIM Spread MVC5 projects).
+Agile development team with daily scrum meetings.
+C#, Visual Studio 2017/2019. 
+ASP.NET MVC5.
+ASP.NET MVC Core 2.1
+TFS for task management.
+Use of SSIS to avoid linked SQL server queries.
+SQL Server and SQL – Creating and Updating SPs, functions, and other complex SQL scripts. SQL XML CRUD operations. Some SQL Server database admin duties also required.
+Bootstrap 3 CSS UI library.
+Javascript
+Knockout JS – Creating and maintaining javascript data bound views, and validations.
+jQuery – DOM operations, animations, etc.
+jQuery AJAX for asynchronous web service requests (MVC and WebAPI controllers). 
+Telerik 3rd party javascript controls.
+HTML5 file handling API.
+Creating and upgrading WCF services.
+Creating and upgrading Web API and MVC web services.
+Created Non-Tradability report for all Ecommerce products (using SSIS plus staging database).
+
+
+Davidson Richards LTD, Derby.			February 2017 – April 2017
+[Contract Role]
+Software Developer
+Working on their commercial WPF EPOS solution, adding an EFT (Electronic Funds Transfer) module to enable the processing of credit/debit card payments. Both in card present and card not present modes of operation. This was an externally audited solution by Verifone LTD.
+WPF 4.6, C# 7.0, GIT, Unit testing (NUnit). Visual Studio 2015.
+Dependency injection with constructor injection using Castle Winsor DI library.
+MVVM programming pattern.
+Moq testing framework for the creation of unit tests.
+SQL Server 2014.
+Flow document design for receipt printing.
+Continuous integration build process.
+Use of JetBrains Resharper C# analysis tools, and also JetBrains DotCover for unit test coverage analysis.
+Entity framework 6.0 with fluent API based data models.
+
+Next PLC, Leicester.				February 2016 – May 2016
+[Contract Role]
+Developer
+Working on Next new WPF EPOS solution for the tech refresh program.
+WPF 4.5, WCF, C#, SQL Server, TFS, Unit testing, data mocking, Style Cop, MVVM programming pattern, Database integration with Dappa.
+Dependency injection with constructor injection using Ninject DI library.
+Visual Studio 2013.
+Moq testing framework, for the creation of unit tests.
+Continuous integration build process with TFS.
+Daily scrum meetings, two weekly sprints.
+Jaama Limited, Tamworth, Staffs	September 2015 - December 2015
+[Contract Role]
+Developer
+SQL Server, Winforms, VB.NET, TFS, Visual Studio 2012.
+Working on Jaama's Key2 vehicle fleet management software.
+Daily scrum meetings.
+
+Esos Limited, Meriden					May 2014 - March 2015
+[Permanent Role]
+Developer
+Required to write and upgrade Esos's Microsoft .NET Web and Windows applications.
+Winforms platform.
+WPF platform utilising the MVVM programming pattern.
+Working with both the C# and VB.NET programming languages.
+Upgrading ASP.NET webforms and MVC solutions.
+Using Umbraco CMS 6 and 7 to create and upgrade commercial web sites for Pertemps Network Group companies, utilising Bootstrap 2/3, AngularJS, KnockoutJS, and JQuery.
+Working with live SQL Server 2012R2 databases. Data modification, creating/updating functions, stored procedures, etc.
+Creating database reports for business analysis (T-SQL scripts, not SSRS).
+
+Mercato Solutions Limited, Birmingham.		March 2013 – August 2013  
+[Permanent Role]
+Developer
+Undertake bug fixing and project upgrades to established C# WPF and Winforms projects including:
+Upgrades to WCF service layer.
+Use of design patterns.
+Microsoft Enterprise Library 5.0: Implementing global exception policies, and exception shielding.
+Use of Microsoft Team Foundation Server.
+Dependency injection (MS unity).
+
+The Hadley Group, Smethwick, West Midlands.     September 2011 – Feb 2013
+[Permanent Role]
+Analyst Programmer.
+
+Required to write and maintain Microsoft .NET 4.0 and 4.5 C# Windows business applications.
+To update and create database schemas to support the Microsoft .NET 4.0 and 4.5 C# Windows business applications.
+Installation and administration of a SharePoint 2010 server for use as a company intranet solution, including company branding and creation of bespoke web parts.
+Creation of ASP.NET 4.5 web applications (Webforms and MVC3), and IIS 7.5 administration.
+Role key skills used:
+Entity framework 4.0 and 4.3.1 code first
+Creation and updating of WPF 4.0, winforms and console applications.
+MVVM programming pattern.
+Use of linq and lamda expressions.
+Creation of C# Windows services.
+Use of Microsoft .NET Rijndael encryption classes for protection of locally held sensitive company data. 
+Microsoft SQL Server 2000 and 2008R2 administration.
+Use of SQL for database access, including stored procedures, views and triggers.
+Database query optimisation.
+Microsoft Windows Server 2008 and 2008R2 administration.
+Presentations to company directors, and managers.
+Production of technical documentation.
+Creation of SharePoint Server 2010 webparts, and other extensions.
+Administration of SharePoint 2010 server.
+Utilised Javascript and JQuery, with ASP.NET MVC3 solution.
+
+
+Omitec Limited, Coventry.				August 2010 – Feb 2011
+[Contract Role]
+Software Developer
+
+Required to write a multi-threaded C# .NET 3.5 WPF Windows application to support a data import process.
+To maintain and upgrade aspects of Omitec's C# .NET based auto-diagnostics software.
+Upgrade large SSIS data import solutions.
+Upgrade SQL Server 2008 database schemas.
+Perform database optimisation where required.
+Required to produce technical documentation.
+
+Gödel Technologies, Manchester		March 2009 – December 2009
+[Contract Role]
+Freelance Software / Web Developer
+
+Undertook various Microsoft .NET projects, duties included:
+Creation of a C# winforms application utilising Microsoft .NET Rijndael encryption classes, for file encryption.
+Created C# ASP.NET small business personnel management web application, utilising SQL Server 2005 database support.
+Installing and administering an Umbraco CMS web solution on remote server with SQL Server support.
+User advice and training.
+Production of support documentation.
+
+
+Verilan Limited, Coventry.			April 2008 – September 2008
+[Contract Role]
+Contract Web Developer / Software Engineer
+
+Worked in a small Team producing Microsoft ASP.NET 2.0 ecommerce related web solutions for external customers. Created using Microsoft Visual Studio 2005.
+Use of Microsoft SQL server 2005 tools for creating relational databases, and reporting from them.
+Required to configure and use Microsoft Internet Information Services (IIS) versions 5.1, and 6.0, to create and administer commercial web applications.
+
+Serck Controls Limited, Coventry		July 2007 – December 2007
+[Contract Role]
+Contract Software Engineer
+
+Worked on a software solution for National Grid Limited to replace a legacy gas distribution network control system.
+Required to write and upgrade Windows applications and compiled class libraries using Microsoft VB.NET 2.0, using Microsoft Visual Studio 2005.
+Use of Serck Controls own bespoke SQL DB engine for database access. 
+
+Fujitsu Telecommunications, Birmingham		May 2006 – March 2007
+[Contract Role]
+Contract Test and Development Engineer
+
+Most of my time at Fujitsu was spent developing and enhancing bespoke Visual C++ MFC based Microsoft Winforms applications using Microsoft Visual Studio .NET (2003), and 2005 releases.
+Required to write a C# .NET 2.0 winforms application to performs binary downloads to the company’s telecommunication products.
+
+
+Marconi PLC, Coventry.							1999 – 2006
+[Permanent Role]
+Test and Development Engineer
+
+Development of Microsoft C and C++ MFC based Windows applications (Winforms) using MS Visual Studio 6.0.
+Deploying solutions to subcontract manufacturers in various worldwide locations. Ongoing support of these solutions was also provided.
+Required to design electrical and electronic hardware.
+Writing of detailed technical documents.
+
+
+
+EDUCATION
+
+Sheffield Hallam University							1995 – 1997
+
+BEng(Hons) Electronic Systems and Information Engineering
+Specialised in Telecommunications and Software Engineering (C++). 
+Studied Mobile Standards for GSM Mobile Phone Technologies. Gained a 2:2.
+
+
+PERSONNAL DETAILS
+
+UK Citizen.
+Car owner.
+
+
+Key Software Related Skills
+	
+Please note: the skills listed below are a general guide for readability purposes, not a full list of all software technologies used.
+
+General Software Skills
+
+Writing and upgrading bespoke C#,VB.NET and C++(MFC), windows based software solutions since 2000 (WPF, Winforms and Console Applications).
+Worked with other software engineers to design efficient re-useable class structures.
+Good practical understanding of Object Orientated Programing.
+Microsoft .NET versions 1.1, 2.0, 3.5, 4.0, 4.5, 4.6 and 4.7.
+Microsoft .NET Core 1 and 2.
+Creation of Microsoft .NET Windows applications and class libraries.
+Creation of Microsoft .NET WPF Windows applications.
+Creation of Microsoft .NET Windows services.
+Use of Microsoft WCF for remote software object transportation using HTTP and TCP protocols.
+Multi-threaded programming with event synchronisation.
+Entity framework versions 4.0, 5.0, and 6.0.
+Use of Microsoft SourceSafe, TFS, GIT and Tortoise SVN for software source control.
+Use of Dependency Injection using most popular DI platforms, with constructor injection.
+Use of data mocking frameworks for creation of unit tests.
+Creation of end-to-end integration tests.
+
+Database and SQL Related Skills
+
+Use of T-SQL for creating Stored Procedures, Functions, and Triggers.
+SQL Server Administration, including versions 2000-2016.
+Designing and modifying relational database schemas for commercial use.
+Collation considerations.
+Database performance considerations.
+Use of database indexing where appropriate.
+Use of SSIS server tools for importing of data.
+
+
+Web Development Skills
+
+Use of ASP.NET MVC, MVC .NET Core 2/3 and Web API, for creating commercial web solutions.
+Use of Javascript libraries including jQuery, Angular 1.0, Angular 2+, and Knockout.JS.
+Bootstrap 2, 3 and 4 CSS UI framework, plus other third party CSS UI Frameworks. 
+Use of HTML 5.0 to provide very specific website layouts as provided by a graphic/web designer.
+Use of CSS for generic website style specifications.
+Jquery, Knockout.JS, Angular.JS Javascript libraries. 
+Some work with Single Page Applications (SPAs).
+Admin of Microsoft IIS 6, 7, 8 and 9 for web hosting.
