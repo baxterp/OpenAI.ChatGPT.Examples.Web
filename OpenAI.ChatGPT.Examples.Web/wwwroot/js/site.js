@@ -8,15 +8,30 @@ function LanguageSelected(languageIN) {
 }
 
 function GetJobCoverLetter() {
+
+  var systemPrompt = "Given the following CV and job description provide a job cover letter";
+  var userPrompt = $('#inputText').val();
+
+  var promptsToSend = new Array();
+  promptsToSend.push(systemPrompt);
+  promptsToSend.push(userPrompt);
+
+  const jsonData = {
+    prompts: promptsToSend
+  };
+
   ShowOverlay('Wait...');
 
   fetch('JobCoverLetter/GetJobCoverLetter', {
-    method: 'GET'
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(jsonData.prompts)
    })
     .then(res => res.json())
     .then(function (data) {
-      console.log('data from server');
-      console.log(data);
       HideOverlay();
       $('#outputText').html(data);
     });
@@ -24,9 +39,7 @@ function GetJobCoverLetter() {
 
 function GetExplanation() {
   var systemPrompt = 'Explain a complicated piece of code';
-  console.log('systemPrompt: ' + systemPrompt);
   var userPrompt = $('#inputText').val();
-  console.log('userPrompt: ' + userPrompt);
 
   var promptsToSend = new Array();
   promptsToSend.push(systemPrompt);
@@ -48,8 +61,6 @@ function GetExplanation() {
   })
   .then(res => res.json())
   .then(function (data) {
-    console.log('data from server');
-    console.log(data);
     HideOverlay();
     $('#outputText').html(data);
   });
@@ -70,9 +81,7 @@ function HideOverlay() {
 function GetTranslation() {
 
   var systemPrompt = 'You will be provided with a sentence in English, and your task is to translate it into ' + language;
-  console.log('systemPrompt: ' + systemPrompt);
   var userPrompt = $('#inputText').val();
-  console.log('userPrompt: ' + userPrompt);
 
   var promptsToSend = new Array();
   promptsToSend.push(systemPrompt);
@@ -94,8 +103,6 @@ function GetTranslation() {
   })
   .then(res => res.json())
   .then(function (data) {
-    console.log('data from server');
-    console.log(data);
     HideOverlay();
     $('#outputText').html(data);
   });

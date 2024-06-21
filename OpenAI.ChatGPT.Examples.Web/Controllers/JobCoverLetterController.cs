@@ -13,18 +13,18 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("JobCoverLetter/GetJobCoverLetter")]
-        public IActionResult GetJobCoverLetter()
+        public IActionResult GetJobCoverLetter([FromBody] List<string> prompts)
         {
-            string systemPrompt = "Given the follwoing CV and job description provide a cover letter";
-            string jobSpecPrompt = FileHelper.GetJobSpec(Directory.GetCurrentDirectory()) ?? string.Empty;
+            string systemPrompt = prompts[0];
+            string jobSpecPrompt = prompts[1];
             string cvPrompt = FileHelper.GetCV(Directory.GetCurrentDirectory()) ?? string.Empty;
 
             var systemMessage = new ChatMessage(ChatMessageRole.System, systemPrompt);
             var userMessages = new List<ChatMessage> { 
-                                    new ChatMessage(ChatMessageRole.User, jobSpecPrompt),
-                                    new ChatMessage(ChatMessageRole.User, cvPrompt)
+                                    new (ChatMessageRole.User, jobSpecPrompt),
+                                    new (ChatMessageRole.User, cvPrompt)
             };
 
             var textResponse = OpenAIHelper.GetReponseFromPrompts(systemMessage, userMessages);
