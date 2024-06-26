@@ -36,4 +36,8 @@ app.MapControllerRoute(
     name: "jobCoverLetter",
     pattern: "{controller=JobCoverLetter}/{action=Index}");
 
+app.MapControllerRoute(
+    name: "languageToSQL",
+    pattern: "{controller=LanguageToSQL}/{action=Index}");
+
 app.Run();

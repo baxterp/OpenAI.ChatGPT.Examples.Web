@@ -1,0 +1,22 @@
+﻿@{
+    var sql = ViewBag.SQLSnippet;
+    var instruction = ViewBag.Instruction;
+}
+
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-sm-12 col-md-12 col-lg-8">
+            <div class="jumbotron">
+                <h2 class="display-5" style="text-align:center">Natural Language to SQL</h2>
+                <p class="lead">This is an example of using ChatGPT to create an SQL query based on a set of data tables.</p>
+                <hr class="my-4">
+                <p>Data Tables</p>
+                <textarea class="CEtextarea" readonly id="inputText1">@sql</textarea>
+                <p>Instruction</p>
+                <textarea class="CEtextareaShort" id="inputText2">@instruction</textarea>
+                <button id="btnSubmit" class="btn btn-primary" style="margin-bottom:5px;" onclick="javascript:GetSQLQuery()">Get SQL Query</button>
+                <textarea class="CEtextarea" readonly id="outputText"></textarea>
+            </div>
+        </div>
+    </div>
+</div>

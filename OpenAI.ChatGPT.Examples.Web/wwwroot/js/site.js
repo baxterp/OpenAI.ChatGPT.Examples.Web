@@ -7,10 +7,10 @@ function LanguageSelected(languageIN) {
   $('#btnSubmit').prop("disabled", false);
 }
 
-function GetJobCoverLetter() {
+function GetSQLQuery() {
 
-  var systemPrompt = "Given the following CV and job description provide a job cover letter";
-  var userPrompt = $('#inputText').val();
+  var systemPrompt = $('#inputText1').val();
+  var userPrompt = $('#inputText2').val();
 
   var promptsToSend = new Array();
   promptsToSend.push(systemPrompt);
@@ -22,7 +22,7 @@ function GetJobCoverLetter() {
 
   ShowOverlay('Wait...');
 
-  fetch('JobCoverLetter/GetJobCoverLetter', {
+  fetch('Home/GetPromptResponse', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
