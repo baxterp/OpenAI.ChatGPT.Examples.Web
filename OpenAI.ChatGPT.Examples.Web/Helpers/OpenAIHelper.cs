@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
+using OpenAI.ChatGPT.Examples.Web.Interfaces;
 using OpenAI_API;
 using OpenAI_API.Chat;
 using OpenAI_API.Completions;
@@ -7,18 +8,25 @@ using System;
 
 namespace OpenAI.ChatGPT.Examples.Web.Helpers
 {
-    public static class OpenAIHelper
+    public class OpenAIHelper : IOpenAIHelper
     {
-        private static OpenAIAPI CreateChatClient()
+        private IOpenAIAPI _openAiApi;
+
+        public OpenAIHelper(IOpenAIAPI openAiApi)
+        {
+            _openAiApi = openAiApi;
+        }
+
+        private OpenAIAPI CreateChatClient()
         {
             try
             {
                 var openAiApiKey = Environment.GetEnvironmentVariable("OpenAIKey", EnvironmentVariableTarget.User);
 
                 APIAuthentication aPIAuthentication = new APIAuthentication(openAiApiKey);
-                OpenAIAPI openAiApi = new OpenAIAPI(aPIAuthentication);
+                _openAiApi = new OpenAIAPI(aPIAuthentication);
 
-                return openAiApi;
+                return _openAiApi as OpenAIAPI;
             }
             catch (Exception ex)
             {
@@ -27,7 +35,7 @@ namespace OpenAI.ChatGPT.Examples.Web.Helpers
             }
         }
 
-        public static string GetReponseFromPrompts(ChatMessage systemPrompt, List<ChatMessage> userPrompts)
+        public string GetReponseFromPrompts(ChatMessage systemPrompt, List<ChatMessage> userPrompts)
         {
             try
             {

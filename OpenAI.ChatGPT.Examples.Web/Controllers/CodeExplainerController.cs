@@ -5,17 +5,24 @@ using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Extensions;
 using System.Net.Http;
+using OpenAI.ChatGPT.Examples.Web.Interfaces;
 
 namespace OpenAI.ChatGPT.Examples.Web.Controllers
 {
     public class CodeExplainerController : Controller
     {
+        IFileHelper _fileHelper;
+        public CodeExplainerController(IFileHelper fileHelper)
+        {
+            _fileHelper = fileHelper;
+        }
+
         public IActionResult Index()
         {
             try
             {
                 string siteRootDirectory = Directory.GetCurrentDirectory();
-                var codeText = FileHelper.GetCodeSnippet(siteRootDirectory);
+                var codeText = _fileHelper.GetCodeSnippet(siteRootDirectory);
                 ViewBag.CodeSnippet = codeText;
                 return View();
             }

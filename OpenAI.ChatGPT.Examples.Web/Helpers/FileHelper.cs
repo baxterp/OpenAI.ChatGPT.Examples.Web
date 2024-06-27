@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Hosting.Server;
+using OpenAI.ChatGPT.Examples.Web.Interfaces;
 
 namespace OpenAI.ChatGPT.Examples.Web.Helpers
 {
-    public static class FileHelper
+    public class FileHelper : IFileHelper
     {
 
-        public static string GetSQLSnippet(string currentDriectory)
+        public string GetSQLSnippet(string currentDriectory)
         {
             try
             {
@@ -19,7 +20,7 @@ namespace OpenAI.ChatGPT.Examples.Web.Helpers
             }
         }
 
-        public static string GetCodeSnippet(string currentDriectory)
+        public string GetCodeSnippet(string currentDriectory)
         {
             try
             {
@@ -33,7 +34,7 @@ namespace OpenAI.ChatGPT.Examples.Web.Helpers
             }
         }
 
-        public static string GetJobSpec(string currentDriectory)
+        public string GetJobSpec(string currentDriectory)
         {
             try
             {
@@ -47,7 +48,7 @@ namespace OpenAI.ChatGPT.Examples.Web.Helpers
             }
         }
 
-        public static string GetCV(string currentDriectory)
+        public string GetCV(string currentDriectory)
         {
             try
             {

@@ -1,14 +1,24 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OpenAI.ChatGPT.Examples.Web.Helpers;
+using OpenAI.ChatGPT.Examples.Web.Interfaces;
 using OpenAI_API.Chat;
 
 namespace OpenAI.ChatGPT.Examples.Web.Controllers
 {
     public class JobCoverLetterController : Controller
     {
+        IFileHelper _fileHelper;
+        IOpenAIHelper _openAIHelper;
+
+        public JobCoverLetterController(IFileHelper fileHelper, IOpenAIHelper openAIHelper) // DI
+        {
+            _fileHelper = fileHelper;
+            _openAIHelper = openAIHelper;   
+        }
+
         public IActionResult Index()
         {
-            var jobSpec = FileHelper.GetJobSpec(Directory.GetCurrentDirectory());
+            var jobSpec = _fileHelper.GetJobSpec(Directory.GetCurrentDirectory());
             ViewBag.JobSpec = jobSpec;
             return View();
         }
@@ -19,7 +29,7 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
         {
             string systemPrompt = prompts[0];
             string jobSpecPrompt = prompts[1];
-            string cvPrompt = FileHelper.GetCV(Directory.GetCurrentDirectory()) ?? string.Empty;
+            string cvPrompt = _fileHelper.GetCV(Directory.GetCurrentDirectory()) ?? string.Empty;
 
             var systemMessage = new ChatMessage(ChatMessageRole.System, systemPrompt);
             var userMessages = new List<ChatMessage> { 
@@ -27,7 +37,7 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
                                     new (ChatMessageRole.User, cvPrompt)
             };
 
-            var textResponse = OpenAIHelper.GetReponseFromPrompts(systemMessage, userMessages);
+            var textResponse = _openAIHelper.GetReponseFromPrompts(systemMessage, userMessages);
 
             return Json(textResponse);
         }

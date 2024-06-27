@@ -1,7 +1,14 @@
+using OpenAI.ChatGPT.Examples.Web.Interfaces;
+using OpenAI.ChatGPT.Examples.Web.Helpers;
+using OpenAI_API;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<IOpenAIHelper, OpenAIHelper>(); // Added DI so classes can be tested
+builder.Services.AddSingleton<IFileHelper, FileHelper>();
+builder.Services.AddSingleton<IOpenAIAPI, OpenAIAPI>();
 
 var app = builder.Build();
 
