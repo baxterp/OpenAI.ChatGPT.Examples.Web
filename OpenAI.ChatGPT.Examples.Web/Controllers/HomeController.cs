@@ -10,7 +10,7 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
     public class HomeController : Controller
     {
         IOpenAIHelper _openAIHelper;
-        public HomeController(IOpenAIHelper openAIHelper) 
+        public HomeController(IOpenAIHelper openAIHelper)
         {
             _openAIHelper = openAIHelper;
         }
@@ -21,7 +21,7 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
         }
 
         [HttpPost]
-        [Route("Home/GetPromptResponse")]
+        [Route("[controller]/GetPromptResponse")]
         public IActionResult GetPromptResponse([FromBody] List<string> prompts)
         {
             string systemPrompt = prompts[0];

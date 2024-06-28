@@ -17,6 +17,7 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
             _fileHelper = fileHelper;
         }
 
+        [Route("~/[controller]/")]
         public IActionResult Index()
         {
             try

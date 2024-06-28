@@ -13,6 +13,7 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
             _fileHelper = fileHelper;   
         }
 
+        [Route("~/[controller]/")]
         public IActionResult Index()
         {
             var sqlSnippet = _fileHelper.GetSQLSnippet(Directory.GetCurrentDirectory());

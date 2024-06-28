@@ -16,6 +16,7 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
             _openAIHelper = openAIHelper;   
         }
 
+        [Route("~/[controller]/")]
         public IActionResult Index()
         {
             var jobSpec = _fileHelper.GetJobSpec(Directory.GetCurrentDirectory());
@@ -24,7 +25,7 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
         }
 
         [HttpPost]
-        [Route("JobCoverLetter/GetJobCoverLetter")]
+        [Route("[controller]/GetJobCoverLetter")]
         public IActionResult GetJobCoverLetter([FromBody] List<string> prompts)
         {
             string systemPrompt = prompts[0];

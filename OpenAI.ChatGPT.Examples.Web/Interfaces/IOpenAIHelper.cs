@@ -1,4 +1,5 @@
-﻿using OpenAI_API.Chat;
+﻿using OpenAI_API;
+using OpenAI_API.Chat;
 
 namespace OpenAI.ChatGPT.Examples.Web.Interfaces
 {

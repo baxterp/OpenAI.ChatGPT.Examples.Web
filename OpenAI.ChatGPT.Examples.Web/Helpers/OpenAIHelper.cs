@@ -8,16 +8,16 @@ using System;
 
 namespace OpenAI.ChatGPT.Examples.Web.Helpers
 {
+    // This class cannot be tested as the class OpenAIAPI cannot be mocked
     public class OpenAIHelper : IOpenAIHelper
     {
         private IOpenAIAPI _openAiApi;
-
         public OpenAIHelper(IOpenAIAPI openAiApi)
         {
             _openAiApi = openAiApi;
         }
 
-        private OpenAIAPI CreateChatClient()
+        private IOpenAIAPI CreateChatClient()
         {
             try
             {
@@ -26,7 +26,7 @@ namespace OpenAI.ChatGPT.Examples.Web.Helpers
                 APIAuthentication aPIAuthentication = new APIAuthentication(openAiApiKey);
                 _openAiApi = new OpenAIAPI(aPIAuthentication);
 
-                return _openAiApi as OpenAIAPI;
+                return _openAiApi;
             }
             catch (Exception ex)
             {
