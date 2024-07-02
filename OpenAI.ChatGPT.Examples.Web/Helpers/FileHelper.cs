@@ -61,5 +61,19 @@ namespace OpenAI.ChatGPT.Examples.Web.Helpers
                 throw;
             }
         }
+
+        public string GetJSONData(string currentDriectory)
+        {
+            try
+            {
+                string jsonDataFilePath = currentDriectory + @"\TextFiles\JSONData.txt";
+                var result = File.ReadAllText(jsonDataFilePath);
+                return result;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

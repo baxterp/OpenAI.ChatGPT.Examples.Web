@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using OpenAI.ChatGPT.Examples.Web.Controllers;
 
-namespace OpenAI.ChatGPT.Examples.Web.Tests
+namespace OpenAI.ChatGPT.Examples.Tests
 {
     [TestFixture]
     public class NaturalLanguageTranslatorControllerTests

@@ -7,6 +7,36 @@ function LanguageSelected(languageIN) {
   $('#btnSubmit').prop("disabled", false);
 }
 
+function GetCSharpModel() {
+
+  var systemPrompt = "Create the appropriate C# classes to contain the follwoing JSON object.";
+  var userPrompt = $('#inputText').val();
+
+  var promptsToSend = new Array();
+  promptsToSend.push(systemPrompt);
+  promptsToSend.push(userPrompt);
+
+  const jsonData = {
+    prompts: promptsToSend
+  };
+
+  ShowOverlay('Wait...');
+
+  fetch('Home/GetPromptResponse', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(jsonData.prompts)
+  })
+    .then(res => res.json())
+    .then(function (data) {
+      HideOverlay();
+      $('#outputText').html(data);
+    });
+}
+
 function GetJobCoverLetter() {
 
   var systemPrompt = "Given the following CV and job description provide a job cover letter";

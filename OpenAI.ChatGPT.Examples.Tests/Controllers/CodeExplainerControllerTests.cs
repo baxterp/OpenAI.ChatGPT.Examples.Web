@@ -5,7 +5,7 @@ using OpenAI.ChatGPT.Examples.Web.Controllers;
 using OpenAI.ChatGPT.Examples.Web.Interfaces;
 using System;
 
-namespace OpenAI.ChatGPT.Examples.Web.Tests
+namespace OpenAI.ChatGPT.Examples.Tests
 {
     [TestFixture]
     public class CodeExplainerControllerTests

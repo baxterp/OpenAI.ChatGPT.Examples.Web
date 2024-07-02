@@ -6,5 +6,6 @@
         string GetCodeSnippet(string currentDirectory);
         string GetJobSpec(string currentDirectory);
         string GetCV(string currentDirectory);
+        string GetJSONData(string currentDriectory);
     }
 }

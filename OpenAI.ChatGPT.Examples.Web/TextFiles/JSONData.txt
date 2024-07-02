@@ -1,0 +1,21 @@
+﻿{
+"projectName": "TODO Application",
+"projectDescription": "A simple application to manage daily tasks",
+"projectManager": "Jane Doe",
+"teamMembers": [
+{
+"name": "John Smith",
+"role": "Developer"
+},
+{
+"name": "Sarah Johnson",
+"role": "Developer"
+},
+{
+"name": "Mike Williams",
+"role": "Quality Assurance"
+}
+],
+"status": "In progress",
+"completionDate": "2023-06-30"
+}
