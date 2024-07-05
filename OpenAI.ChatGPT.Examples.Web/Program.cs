@@ -8,9 +8,7 @@ try
 
     // Add services to the container.
     builder.Services.AddControllersWithViews();
-    builder.Services.AddSingleton<IOpenAIHelper, OpenAIHelper>(); // Added as DI so classes can be tested
     builder.Services.AddSingleton<IFileHelper, FileHelper>();
-    builder.Services.AddSingleton<IOpenAIAPI, OpenAIAPI>();
 
     var app = builder.Build();
 

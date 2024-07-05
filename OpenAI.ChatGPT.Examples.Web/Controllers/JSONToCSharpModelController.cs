@@ -6,12 +6,10 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
     public class JSONToCSharpModelController : Controller
     {
         IFileHelper _fileHelper;
-        IOpenAIHelper _openAIHelper;
 
-        public JSONToCSharpModelController(IFileHelper fileHelper, IOpenAIHelper openAIHelper) // DI
+        public JSONToCSharpModelController(IFileHelper fileHelper) // DI
         {
             _fileHelper = fileHelper;
-            _openAIHelper = openAIHelper;
         }
 
         [Route("~/[controller]/")]

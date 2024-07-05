@@ -8,12 +8,10 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
     public class JobCoverLetterController : Controller
     {
         IFileHelper _fileHelper;
-        IOpenAIHelper _openAIHelper;
 
-        public JobCoverLetterController(IFileHelper fileHelper, IOpenAIHelper openAIHelper) // DI
+        public JobCoverLetterController(IFileHelper fileHelper) // DI
         {
             _fileHelper = fileHelper;
-            _openAIHelper = openAIHelper;   
         }
 
         [Route("~/[controller]/")]
@@ -28,6 +26,7 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
         [Route("[controller]/GetJobCoverLetter")]
         public IActionResult GetJobCoverLetter([FromBody] List<string> prompts)
         {
+            OpenAIHelper openAIHelper = new OpenAIHelper();
             string systemPrompt = prompts[0];
             string jobSpecPrompt = prompts[1];
             string cvPrompt = _fileHelper.GetCV(Directory.GetCurrentDirectory()) ?? string.Empty;
@@ -38,7 +37,7 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
                                     new (ChatMessageRole.User, cvPrompt)
             };
 
-            var textResponse = _openAIHelper.GetReponseFromPrompts(systemMessage, userMessages);
+            var textResponse = openAIHelper.GetReponseFromPrompts(systemMessage, userMessages);
 
             return Json(textResponse);
         }
