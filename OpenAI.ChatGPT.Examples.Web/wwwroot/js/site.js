@@ -175,4 +175,5 @@ $(function () {
   $('#langBtn').on("click", (function () {
     $('#langDD').toggleClass('show');
   }));
+  $('#lblLang').html('none selected');
 });
