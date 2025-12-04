@@ -34,7 +34,7 @@ body {
     background-color: #355E3B;
     color: wheat;
     overflow-y: scroll;
-    height: 25pxpx;
+    height: 25px;
     resize: none;
     width: 100%;
 }
@@ -51,4 +51,9 @@ body {
     color: white;
     text-align: center;
     padding-top:8px
+}
+
+.fileInput {
+    margin-bottom: 20px;
+    color: var(--bs-body-color);
 }

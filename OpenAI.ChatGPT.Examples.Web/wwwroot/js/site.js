@@ -168,6 +168,38 @@ function GetTranslation() {
   });
 }
 
+function SummarizeDocument() {
+  const fileInput = document.getElementById('fileInput');
+  const outputText = document.getElementById('outputText');
+
+  if (!fileInput.files || fileInput.files.length === 0) {
+    alert('Please select a Word document.');
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append('file', fileInput.files[0]);
+
+  ShowOverlay('Wait...');
+
+  fetch('/WordDocument/WordDocSummarize', {
+    method: 'POST',
+    body: formData
+  })
+    .then(response => {
+      if (!response.ok) throw new Error('Network response was not ok');
+      return response.text();
+    })
+    .then(summary => {
+      outputText.value = summary;
+			fileInput.value = ''; 
+      HideOverlay();
+    })
+    .catch(error => {
+      outputText.value = 'Error: ' + error.message;
+    });
+}
+
 $(function () {
   $('#examplesBtn').on("click", (function () {
     $('#examplesDD').toggleClass('show');

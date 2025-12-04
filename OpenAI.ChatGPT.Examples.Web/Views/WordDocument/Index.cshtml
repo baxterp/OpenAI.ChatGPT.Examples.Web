@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Word Doc Summariser";
+}
+
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-sm-12 col-md-12 col-lg-8">
+            <div class="jumbotron">
+                <h2 class="display-5" style="text-align:center">Word Document Summeriser</h2>
+                <p class="lead">This is an example of using ChatGPT to summerise a MS Word document, in less than 200 words.</p>
+                <hr class="my-4">
+                <input type="file" class="form-control btn fileInput" accept=".doc, .docx" id="fileInput"
+                       onchange="javascript:SummarizeDocument()" />
+                <p class="lead">Document Summary</p>
+                <textarea class="CEtextarea" readonly id="outputText"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
