@@ -1,6 +1,5 @@
 using OpenAI.ChatGPT.Examples.Web.Interfaces;
 using OpenAI.ChatGPT.Examples.Web.Helpers;
-using OpenAI_API;
 
 try
 {

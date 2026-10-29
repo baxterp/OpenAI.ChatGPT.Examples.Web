@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using OpenAI.ChatGPT.Examples.Web.Models;
 using System.Diagnostics;
 using OpenAI.ChatGPT.Examples.Web.Helpers;
-using OpenAI_API.Chat;
+using OpenAI.Chat;
 using OpenAI.ChatGPT.Examples.Web.Interfaces;
 
 namespace OpenAI.ChatGPT.Examples.Web.Controllers
@@ -19,13 +19,13 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
         public IActionResult GetPromptResponse([FromBody] List<string> prompts)
         {
             OpenAIHelper openAIHelper = new OpenAIHelper();
-            string systemPrompt = prompts[0];
-            string userPrompt = prompts[1];
 
-            var systemMessage = new ChatMessage(ChatMessageRole.System, systemPrompt);
-            var userMessages = new List<ChatMessage> { new ChatMessage(ChatMessageRole.User, userPrompt) };
-
-            var textResponse = openAIHelper.GetReponseFromPrompts(systemMessage, userMessages);
+            var chatMessageList = new List<ChatMessage>();
+            foreach (var prompt in prompts)
+            {
+                chatMessageList.Add(new UserChatMessage(prompt));
+            }
+            var textResponse = openAIHelper.GetReponseFromPrompts(chatMessageList);
 
             return Json(textResponse);
         }

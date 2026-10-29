@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OpenAI.Chat;
 using OpenAI.ChatGPT.Examples.Web.Helpers;
 using OpenAI.ChatGPT.Examples.Web.Interfaces;
-using OpenAI_API.Chat;
 
 namespace OpenAI.ChatGPT.Examples.Web.Controllers
 {
@@ -27,17 +27,13 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
         public IActionResult GetJobCoverLetter([FromBody] List<string> prompts)
         {
             OpenAIHelper openAIHelper = new OpenAIHelper();
-            string systemPrompt = prompts[0];
-            string jobSpecPrompt = prompts[1];
-            string cvPrompt = _fileHelper.GetCV(Directory.GetCurrentDirectory()) ?? string.Empty;
 
-            var systemMessage = new ChatMessage(ChatMessageRole.System, systemPrompt);
-            var userMessages = new List<ChatMessage> { 
-                                    new (ChatMessageRole.User, jobSpecPrompt),
-                                    new (ChatMessageRole.User, cvPrompt)
-            };
-
-            var textResponse = openAIHelper.GetReponseFromPrompts(systemMessage, userMessages);
+            var chatMessageList = new List<ChatMessage>();
+            foreach (var prompt in prompts)
+            {
+                chatMessageList.Add(new UserChatMessage(prompt));
+            }
+            var textResponse = openAIHelper.GetReponseFromPrompts(chatMessageList);
 
             return Json(textResponse);
         }

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OpenAI.Chat;
 using OpenAI.ChatGPT.Examples.Web.Helpers;
-using OpenAI_API.Chat;
 using Spire.Doc;
 
 namespace OpenAI.ChatGPT.Examples.Web.Controllers
@@ -38,10 +38,11 @@ namespace OpenAI.ChatGPT.Examples.Web.Controllers
             string systemPrompt = "You are required to summerise the following text, in no more 200 words";
             string userPrompt = text;
 
-            var systemMessage = new ChatMessage(ChatMessageRole.System, systemPrompt);
-            var userMessages = new List<ChatMessage> { new ChatMessage(ChatMessageRole.User, userPrompt) };
+            var chatMessageList = new List<ChatMessage>();
+            chatMessageList.Add(systemPrompt);
+            chatMessageList.Add(userPrompt);
 
-            var textResponse = openAIHelper.GetReponseFromPrompts(systemMessage, userMessages);
+            var textResponse = openAIHelper.GetReponseFromPrompts(chatMessageList);
 
             return Ok(textResponse);
         }

@@ -1,25 +1,21 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
+using OpenAI.Chat;
 using OpenAI.ChatGPT.Examples.Web.Interfaces;
-using OpenAI_API;
-using OpenAI_API.Chat;
-using OpenAI_API.Completions;
-using OpenAI_API.Models;
 using System;
 
 namespace OpenAI.ChatGPT.Examples.Web.Helpers
 {
     public class OpenAIHelper
     {
-        private OpenAIAPI CreateChatClient()
+        private ChatClient CreateChatClient()
         {
             try
             {
                 var openAiApiKey = Environment.GetEnvironmentVariable("OpenAIKey", EnvironmentVariableTarget.User);
 
-                APIAuthentication aPIAuthentication = new APIAuthentication(openAiApiKey);
-                var openAiApi = new OpenAIAPI(aPIAuthentication);
+                ChatClient client = new(model: "gpt-5.2", apiKey: openAiApiKey);
 
-                return openAiApi;
+                return client;
             }
             catch (Exception ex)
             {
@@ -28,25 +24,19 @@ namespace OpenAI.ChatGPT.Examples.Web.Helpers
             }
         }
 
-        public string GetReponseFromPrompts(ChatMessage systemPrompt, List<ChatMessage> userPrompts)
+        public string GetReponseFromPrompts(List<ChatMessage> userPrompts)
         {
             try
             {
-                var openAiApi = CreateChatClient();
-                var maxTokens = 500;
-                var combinedMessages = new List<ChatMessage> { systemPrompt };
-                foreach (var item in userPrompts) combinedMessages.Add(item);
+                var client = CreateChatClient();
 
-                var completionRequest = new ChatRequest()
-                {
-                    Model = Model.ChatGPTTurbo,
-                    Temperature = 0.0,
-                    MaxTokens = maxTokens,
-                    Messages = combinedMessages.ToArray()
-                };
+                var chatMessageList = new List<ChatMessage>();
+                chatMessageList.AddRange(userPrompts);
+                var chatMessage = chatMessageList.ToArray();
 
-                var completionResult = Task.Run(() => openAiApi.Chat.CreateChatCompletionAsync(completionRequest)).Result;
-                var generatedText = completionResult.Choices[0].Message.TextContent;
+                var response = client.CompleteChat(chatMessage);
+
+                var generatedText = response.Value.Content[0].Text;
 
                 return generatedText;
             }
